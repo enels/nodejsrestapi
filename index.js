@@ -15,7 +15,7 @@ var server = http.createServer(function(req, res){
 
     // get the path
     var path = parseUrl.pathname;
-    var trimmedPath = path.replace(/\/+|\/+$/g, '');
+    var trimmedPath = path.replace(/^\/+|\/+$/g, '');
 
     // send the response
     res.end("Hello, World!");
